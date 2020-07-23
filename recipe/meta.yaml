@@ -23,6 +23,7 @@ requirements:
     - torchvision
     - pytorch >=1.4
 
+
 test:
   imports:
     - timm
