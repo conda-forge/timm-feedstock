@@ -1,17 +1,17 @@
 {% set name = "timm" %}
-{% set version = "0.1.26" %}
+{% set version = "0.1.30" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b7a7061885bd2797603fb6482f2337be9e6ba4199edac624a8b27aa5612fca77
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 83b80886a4e4b110845273aa4457d41e2f34993747bdf78ae92a4648b79b386f
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
   run:
     - python >=3.7
     - torchvision
+    - pytorch >=1.4
 
 test:
   imports:
@@ -33,7 +34,7 @@ test:
     - timm.scheduler
 
 about:
-  home: "https://github.com/rwightman/pytorch-image-models"
+  home: https://github.com/rwightman/pytorch-image-models
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
