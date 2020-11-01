@@ -5,11 +5,13 @@ Home: https://github.com/rwightman/pytorch-image-models
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/timm-feedstock/blob/master/LICENSE.txt)
 
 Summary: (Unofficial) PyTorch Image Models
 
+Development: https://github.com/rwightman/pytorch-image-models
 
+Documentation: https://pypi.org/project/timm/
 
 Current build status
 ====================
