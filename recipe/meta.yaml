@@ -17,14 +17,14 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.7
   run:
-    - python >=3.7
-    - pytorch >=1.4
+    - python >=3.6
+    - pytorch >=1.7
     - torchvision
-    - typing_extensions
-    - pillow
+    - pyyaml
+    - huggingface_hub
 
 test:
   imports:
@@ -35,6 +35,10 @@ test:
     - timm.models.layers
     - timm.optim
     - timm.scheduler
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/rwightman/pytorch-image-models
