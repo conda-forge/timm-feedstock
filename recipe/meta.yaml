@@ -1,6 +1,7 @@
 {% set name = "timm" %}
 {% set version = "0.6.5" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -46,6 +47,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - deepsworld
     - ndmaxar
     - oblute
     - rluria14
+    - thewchan
