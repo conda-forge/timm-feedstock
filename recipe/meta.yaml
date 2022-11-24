@@ -1,5 +1,5 @@
 {% set name = "timm" %}
-{% set version = "0.6.11" %}
+{% set version = "0.6.12" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 09568842b65abbd8c99864ab893ec0902f8ad577d0112b45e1323e72ca7b3fa5
+  sha256: 8f1747121598e06a1ea2d00df16d332cc284cdd4596bdc136b490a2122d3aa91
 
 build:
   number: 0
@@ -17,14 +17,14 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.7
   run:
-    - python >=3.7
-    - pytorch >=1.4
+    - python >=3.6
+    - pytorch >=1.7
     - torchvision
-    - typing_extensions
-    - pillow
+    - pyyaml
+    - huggingface_hub
 
 test:
   imports:
@@ -35,6 +35,10 @@ test:
     - timm.models.layers
     - timm.optim
     - timm.scheduler
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/rwightman/pytorch-image-models
