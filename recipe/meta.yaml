@@ -25,6 +25,7 @@ requirements:
     - torchvision
     - pyyaml
     - huggingface_hub
+    - safetensors
 
 test:
   imports:
