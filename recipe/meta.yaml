@@ -1,5 +1,5 @@
 {% set name = "timm" %}
-{% set version = "0.9.6" %}
+{% set version = "0.9.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c3c0451b69431de0290eed5662e66b134caf916f1cb9b4aa3b9a13c3d61fd03
+  sha256: 2bfb1029e90b72e65eb9c75556169815f2e82257eaa1f6ebd623a4b4a52867a2
 
 build:
   number: 0
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - pytorch >=1.7
     - torchvision
     - pyyaml
