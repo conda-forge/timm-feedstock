@@ -17,14 +17,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - pdm
 
     # The follow might also be needed
     - pdm-backend
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pytorch >=1.7
     - torchvision
     - pyyaml
@@ -44,6 +44,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/rwightman/pytorch-image-models
