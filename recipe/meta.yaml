@@ -30,6 +30,7 @@ requirements:
     - pyyaml
     - huggingface_hub
     - safetensors >=0.2
+    - numpy
 
 test:
   imports:
