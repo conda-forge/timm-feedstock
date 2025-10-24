@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: timm
-  version: "1.0.20"
+  version: "1.0.21"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7468d32a410c359181c1ef961f49c7e213286e0c342bfb898b99534a4221fc54
+  sha256: aa372fe43a85ed6ea0dd14945dac724c842e6e373779e2a2afd67d7dc1b82c4c
 
 build:
   number: 0
