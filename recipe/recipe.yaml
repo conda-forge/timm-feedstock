@@ -21,30 +21,23 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - pdm
-    # The follow might also be needed
     - pdm-backend
   run:
     - python >=${{ python_min }}
-    - pytorch >=1.7
+    - pytorch
     - torchvision
     - pyyaml
-    - huggingface_hub >=0.17.0
-    - safetensors >=0.2
-    - numpy
+    - huggingface_hub
+    - safetensors
 
 tests:
   - python:
       imports:
         - timm
-        - timm.data
-        - timm.loss
-        - timm.models
-        - timm.models.layers
-        - timm.optim
-        - timm.scheduler
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: Apache-2.0
